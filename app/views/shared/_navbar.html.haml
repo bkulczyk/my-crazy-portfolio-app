@@ -1,0 +1,12 @@
+%nav.navbar.navbar-expand-md.navbar-light.bg-light
+  .container.mx-auto
+    = link_to Rails.configuration.application_name, root_path, class: "navbar-brand"
+    %button.navbar-toggler{"aria-controls" => "navbarsExample04", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-bs-target" => "#navbarMain", "data-bs-toggle" => "collapse", :type => "button"}
+      %span.navbar-toggler-icon
+    #navbarMain.collapse.navbar-collapse
+      %ul.navbar-nav.me-auto.mt-2.mt-md-0
+      %ul.navbar-nav
+        %li.nav-item= link_to "Portfolio", new_user_session_path, class: "nav-link"
+        %li.nav-item= link_to "CV", new_user_session_path, class: "nav-link"
+        %li.nav-item= link_to "Blog", new_user_session_path, class: "nav-link"
+        %li.nav-item= link_to "Contact", new_user_session_path, class: "nav-link"

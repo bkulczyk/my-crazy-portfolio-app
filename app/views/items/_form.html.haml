@@ -1,0 +1,53 @@
+= form_with(model: item) do |form|
+  - if item.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(item.errors.count, "error")
+        prohibited this item from being saved:
+      %ul
+        - item.errors.full_messages.each do |message|
+          %li= message
+  .mb-3
+    = form.label :title, class: 'form-label'
+    = form.text_field :title, class: 'form-control'
+  .mb-3
+    = form.label :description, class: 'form-label'
+    = form.text_area :description, class: 'form-control'
+  .mb-3
+    = form.label :content, class: 'form-label'
+    = form.text_area :content, class: 'form-control'
+  .mb-3
+    .form-check
+      %label.form-check-label
+        = form.check_box :show_on_portfolio, class: "form-check-input"
+        Portfolio item
+  .mb-3
+    .form-check
+      %label.form-check-label
+        = form.check_box :show_on_blog, class: "form-check-input"
+        Blog post
+  .mb-3
+    .form-check
+      %label.form-check-label
+        = form.check_box :show_in_calendar, class: "form-check-input"
+        Calendar event
+  .mb-3
+    = form.label :start, class: 'form-label'
+    = form.datetime_field :start, class: 'form-control'
+  .mb-3
+    = form.label :end, class: 'form-label'
+    = form.datetime_field :end, class: 'form-control'
+  .mb-3
+    .form-check
+      %label.form-check-label
+        = form.check_box :archive, class: "form-check-input"
+        Archive
+  .mb-3
+    - if item.persisted?
+      .float-end
+        = link_to 'Destroy', item, method: :delete, class: "text-danger", data: { confirm: 'Are you sure?' }
+    = form.submit class: 'btn btn-primary'
+    - if item.persisted?
+      = link_to "Cancel", item, class: "btn btn-link"
+    - else
+      = link_to "Cancel", items_path, class: "btn btn-link"

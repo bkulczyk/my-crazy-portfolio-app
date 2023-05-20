@@ -1,0 +1,25 @@
+.page-header
+  = link_to items_path, class: 'btn btn-default' do
+    All Items
+  = link_to edit_item_path(@item), class: 'btn btn-primary' do
+    Edit
+  %h1 Show item
+%dl.dl-horizontal
+  %dt Title:
+  %dd= @item.title
+  %dt Description:
+  %dd= @item.description
+  %dt Content:
+  %dd= @item.content
+  %dt Show on portfolio:
+  %dd= @item.show_on_portfolio
+  %dt Show on blog:
+  %dd= @item.show_on_blog
+  %dt Show in calendar:
+  %dd= @item.show_in_calendar
+  %dt Start:
+  %dd= @item.start
+  %dt End:
+  %dd= @item.end
+  %dt Archive:
+  %dd= @item.archive

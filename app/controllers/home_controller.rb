@@ -2,7 +2,10 @@ class HomeController < ApplicationController
   def index
   end
 
-  def terms
+  def contact
+  end
+  
+  def cv
   end
 
   def privacy

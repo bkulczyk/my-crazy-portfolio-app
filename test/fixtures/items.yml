@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  content: MyText
+  show_on_portfolio: false
+  show_on_blog: false
+  show_in_calendar: false
+  start: 2023-05-20 06:47:40
+  end: 2023-05-20 06:47:40
+  archive: false
+
+two:
+  title: MyString
+  description: MyText
+  content: MyText
+  show_on_portfolio: false
+  show_on_blog: false
+  show_in_calendar: false
+  start: 2023-05-20 06:47:40
+  end: 2023-05-20 06:47:40
+  archive: false

@@ -1,0 +1,36 @@
+= search_form_for @q, html: { class: 'form-inline' } do |f|
+  = f.search_field :title_cont, class: 'form-control', placeholder: 'Search by name'
+  = f.submit 'Search', class: 'btn btn-primary'
+.row
+  .col-sm-6
+    %h1 Items
+  .col-sm-6.text-end
+    = link_to new_item_path, class: 'btn btn-primary' do
+      Add New Item
+.table-responsive
+  %table.table.table-striped.table-bordered.table-hover
+    %thead
+      %tr
+        %th Title
+        %th Description
+        %th Content
+        %th Show on portfolio
+        %th Show on blog
+        %th Show in calendar
+        %th Start
+        %th End
+        %th Archive
+        %th
+    %tbody
+      - @items.each do |item|
+        = content_tag :tr, id: dom_id(item), class: dom_class(item) do
+          %td= item.title
+          %td= item.description
+          %td= item.content
+          %td= item.show_on_portfolio
+          %td= item.show_on_blog
+          %td= item.show_in_calendar
+          %td= item.start
+          %td= item.end
+          %td= item.archive
+          %td= link_to 'Show', item
