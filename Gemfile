@@ -31,6 +31,7 @@ gem "whenever", require: false
 gem "responders", github: "heartcombo/responders", branch: "main"
 gem "haml-rails", "~> 2.0"
 gem 'will_paginate', '~> 3.3'
+gem 'will_paginate-bootstrap-style'
 gem 'ransack', :github => 'activerecord-hackery/ransack', :branch => 'main'
 
 group :development, :test do
