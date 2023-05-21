@@ -14,25 +14,21 @@
       %tr
         %th Title
         %th Description
-        %th Content
-        %th Show on portfolio
-        %th Show on blog
-        %th Show in calendar
+        %th Appearance
         %th Start
         %th End
-        %th Archive
         %th
     %tbody
       - @items.each do |item|
         = content_tag :tr, id: dom_id(item), class: dom_class(item) do
           %td= item.title
           %td= item.description
-          %td= item.wysiwyg
-          %td= item.show_on_portfolio
-          %td= item.show_on_blog
-          %td= item.show_in_calendar
+          %td
+            = item.show_on_portfolio
+            = item.show_on_blog
+            = item.show_in_calendar
+            = item.archive
           %td= item.start
           %td= item.end
-          %td= item.archive
           %td= link_to 'Show', item
 = will_paginate @items
