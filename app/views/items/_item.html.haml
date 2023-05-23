@@ -3,6 +3,9 @@
     %strong Title:
     = item.title
   %p
+    %stron Header image:
+    = image_tag item.header_image if item.header_image.attached?
+  %p
     %strong Description:
     = item.description
   %p

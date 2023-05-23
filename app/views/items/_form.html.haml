@@ -11,6 +11,11 @@
     = form.label :title, class: 'form-label'
     = form.text_field :title, class: 'form-control'
   .mb-3
+    = form.label :header_image, class: "form-label"
+    = form.file_field :header_image, accept:'image/*'
+    // show image if it exists
+    = image_tag item.header_image if item.header_image.attached?
+  .mb-3
     = form.label :description, class: 'form-label'
     = form.text_area :description, class: 'form-control'
   .mb-3

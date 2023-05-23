@@ -7,6 +7,8 @@
 %dl.dl-horizontal
   %dt Title:
   %dd= @item.title
+  %dt Header image:
+  %dd= image_tag @item.header_image if @item.header_image.attached?
   %dt Description:
   %dd= @item.description
   %dt Content:

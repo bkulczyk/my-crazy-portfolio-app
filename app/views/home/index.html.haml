@@ -3,3 +3,11 @@
   Use this document as a way to quickly start any new project.
   %br/
   All you get is this text and a mostly barebones HTML document.
+
+// show records from item model
+- @items.each do |item|
+  = item.title
+  = item.description
+  = image_tag item.header_image if item.header_image.attached?
+
+

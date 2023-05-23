@@ -1,5 +1,6 @@
 class Item < ApplicationRecord
   
+  has_one_attached :header_image
   has_rich_text :wysiwyg
   
   def self.ransackable_attributes(auth_object = nil)

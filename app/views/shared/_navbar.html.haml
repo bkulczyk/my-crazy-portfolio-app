@@ -6,7 +6,7 @@
     #navbarMain.collapse.navbar-collapse
       %ul.navbar-nav.me-auto.mt-2.mt-md-0
       %ul.navbar-nav
-        %li.nav-item= link_to "Portfolio", new_user_session_path, class: "nav-link"
-        %li.nav-item= link_to "CV", new_user_session_path, class: "nav-link"
-        %li.nav-item= link_to "Blog", new_user_session_path, class: "nav-link"
-        %li.nav-item= link_to "Contact", new_user_session_path, class: "nav-link"
+        %li.nav-item= link_to "Portfolio", root_path, class: "nav-link"
+        %li.nav-item= link_to "CV", cv_path, class: "nav-link"
+        %li.nav-item= link_to "Blog", blog_path, class: "nav-link"
+        %li.nav-item= link_to "Contact", contact_path, class: "nav-link"
