@@ -5,8 +5,8 @@ class HomeController < ApplicationController
     @items = Item.where(show_on_portfolio: true).order(start: :asc).all
   end
 
-  def blog
-  end
+  # def blog
+  # end
 
   def contact
   end
