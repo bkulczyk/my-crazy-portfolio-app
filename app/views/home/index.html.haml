@@ -1,13 +1,12 @@
-%h1 Welcome to Jumpstart!
+%h1 Hi, I'm Bartosz!
 %p.lead
-  Use this document as a way to quickly start any new project.
-  %br/
-  All you get is this text and a mostly barebones HTML document.
+  You can go through this timeline to know me better or just click in menu to look at boring CV
 
 // show records from item model
-- @items.each do |item|
-  = item.title
-  = item.description
-  = image_tag item.header_image if item.header_image.attached?
-
-
+.container
+  .d-flex.p-4
+    - @items.each do |item|
+      = image_tag item.header_image, class: "img-fluid", style: "max-width: 500px" if item.header_image.attached?
+      .p-2
+        %h2= item.title
+        %p= item.description
