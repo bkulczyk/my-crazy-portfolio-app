@@ -3,7 +3,7 @@
     %span
       © #{Date.today.year} Bartosz Kulczyk - Made with ❤️ and ☕ but powered by My Crazy Portfolio App
     %ul.d-inline.float-end.list-inline.mb-0
-      %li.list-inline-item.mr-3= link_to "Privacy", privacy_path
+      // %li.list-inline-item.mr-3= link_to "Privacy", privacy_path
       - if user_signed_in?
         %li.list-inline-item.mr-3= link_to "Items", items_path
         %li.list-inline-item.mr-3= link_to "Settings", edit_user_registration_path

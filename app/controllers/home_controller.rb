@@ -14,7 +14,7 @@ class HomeController < ApplicationController
   def cv
   end
 
-  def privacy
-  end
+  # def privacy
+  # end
 
 end
