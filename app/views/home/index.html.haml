@@ -1,12 +1,27 @@
-%h1 Hi, I'm Bartosz!
-%p.lead
+.justify-content-center.align-items-center.min-vh-100
+  %h1 Hi, I'm Bartosz!
+  %p.lead
   You can go through this timeline to know me better or just click in menu to look at boring CV
 
 // show records from item model
 .container
-  .d-flex.p-4
+  .row.justify-content-center.align-items-center.min-vh-100
     - @items.each do |item|
-      = image_tag item.header_image, class: "img-fluid", style: "max-width: 500px" if item.header_image.attached?
-      .p-2
-        %h2= item.title
-        %p= item.description
+      .col-lg-8
+        .card.mb-4
+          .card-body
+            .row.align-items-center
+              .col-lg-4
+                %img.img-fluid{:src => item.header_image, :alt => "Nice image here"}
+              .col-lg-8
+                %h5.card-title.text-right
+                  = item.title
+                %p.card-text.text-right
+                  %small
+                    - if item.end
+                      = item.start.strftime("%Y-%m-%d")
+                    %br
+                    - if item.end
+                      = item.end.strftime("%Y-%m-%d")
+                %p.card-text.text-right
+                  = item.description
